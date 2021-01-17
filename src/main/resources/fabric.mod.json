@@ -10,9 +10,8 @@
   "license": "MIT",
   "environment": "*",
   "entrypoints": {
-    "main": [
-      "io.github.armramzing.aier.Aier"
-    ]
+    "client": ["io.github.armramzing.aier.client.AierClient"],
+    "main": ["io.github.armramzing.aier.Aier"]
   },
   "mixins": [
     "aier.mixins.json"
