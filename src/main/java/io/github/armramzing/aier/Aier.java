@@ -12,6 +12,9 @@ public final class Aier implements ModInitializer {
 
     @Override
     public void onInitialize() {
+        logger.info("[AIER]Anti-internal Energy Revolution is starting!");
+        logger.info("[AIER]Thanks for your playing");
+        logger.info("[AIER]From ARMrAmzing, the creator of AmazingRabbit Studio");
         try {
             Class.forName(Blocks.class.getName());
             Class.forName(Items.class.getName());
