@@ -1,5 +1,7 @@
 package io.github.armramzing.aier.screen;
 
+import io.github.armramzing.aier.screen.slot.IceFurnaceFuelSlot;
+import io.github.armramzing.aier.screen.slot.IceFurnaceOutputSlot;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventory;
@@ -27,9 +29,9 @@ public class IceFurnaceScreenHandler extends ScreenHandler {
         // Input
         addSlot(new Slot(inv, 0, 56, 17));
         // Fuel
-        addSlot(new Slot(inv, 1, 56, 53));
+        addSlot(new IceFurnaceFuelSlot(inv, 1, 56, 53));
         // Output
-        addSlot(new Slot(inv, 2, 116, 35));
+        addSlot(new IceFurnaceOutputSlot(inv, 2, 116, 35));
         int m;
         int l;
         //The player inventory

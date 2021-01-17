@@ -1,6 +1,3 @@
 {
-  "parent": "block/furnace",
-  "textures": {
-    "all": "minecraft:block/cobblestone"
-  }
+  "parent": "block/furnace"
 }

@@ -11,7 +11,7 @@ import net.minecraft.util.registry.Registry;
 import java.util.function.Supplier;
 
 public final class Blocks {
-    public static final Block ICE_FURNACE = register("ice_furnace", new Block(Block.Settings.of(Material.METAL).strength(2)));
+    public static final Block ICE_FURNACE = register("ice_furnace", new IceFurnace(Block.Settings.of(Material.METAL).strength(2)));
     public static final BlockEntityType<IceFurnaceEntity> ICE_FURNACE_ENTITY =
             register("bin_block", IceFurnaceEntity::new, ICE_FURNACE);
 

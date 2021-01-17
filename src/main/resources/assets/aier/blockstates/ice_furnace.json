@@ -1,5 +1,12 @@
 {
   "variants": {
-    "": { "model": "aier:block/ice_furnace" }
+    "facing=east,lit=false": { "model": "aier:block/ice_furnace" },
+    "facing=south,lit=false": { "model": "aier:block/ice_furnace" },
+    "facing=west,lit=false": { "model": "aier:block/ice_furnace" },
+    "facing=north,lit=false": { "model": "aier:block/ice_furnace" },
+    "facing=east,lit=true": { "model": "aier:block/ice_furnace_on" },
+    "facing=south,lit=true": { "model": "aier:block/ice_furnace_on" },
+    "facing=west,lit=true": { "model": "aier:block/ice_furnace_on" },
+    "facing=north,lit=true": { "model": "aier:block/ice_furnace_on" }
   }
 }

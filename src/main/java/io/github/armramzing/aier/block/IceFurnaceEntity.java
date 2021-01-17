@@ -22,7 +22,13 @@ import org.jetbrains.annotations.Nullable;
  * @author squid233
  * @since 2021/01/17
  */
-public class IceFurnaceEntity extends BlockEntity implements NamedScreenHandlerFactory, ImplementedInventory, SidedInventory {
+public class IceFurnaceEntity extends BlockEntity
+        implements NamedScreenHandlerFactory,
+        ImplementedInventory,
+        SidedInventory {
+    private static final int[] TOP_SLOT = {0};
+    private static final int[] SIDE_SLOT = {1};
+    private static final int[] BOTTOM_SLOT = {2};
     private DefaultedList<ItemStack> inventory = DefaultedList.ofSize(3, ItemStack.EMPTY);
 
     public IceFurnaceEntity() {
@@ -61,7 +67,7 @@ public class IceFurnaceEntity extends BlockEntity implements NamedScreenHandlerF
 
     @Override
     public int[] getAvailableSlots(Direction side) {
-        return new int[0];
+        return side == Direction.UP ? TOP_SLOT : side == Direction.DOWN ? BOTTOM_SLOT : SIDE_SLOT;
     }
 
     @Override
