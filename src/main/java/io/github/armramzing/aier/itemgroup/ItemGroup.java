@@ -1,28 +1,26 @@
 package io.github.armramzing.aier.itemgroup;
 
-import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
+
+import static io.github.armramzing.aier.block.ice_furnace.ICE_FURNACE;
+import static io.github.armramzing.aier.item.ice_core.ICE_CORE;
+import static io.github.armramzing.aier.item.icy_iron_ingot.ICY_IRON_INGOT;
 
 
-public class ItemGroup implements ModInitializer {
+public class ItemGroup {
 
-    public static final Item ICE_CORE = new Item(new Item.Settings().group(ItemGroup.AIER));
+    public static final net.minecraft.item.ItemGroup AIER = FabricItemGroupBuilder.create(
+            new Identifier("aier", "aier"))
+            .icon(() -> new ItemStack(ICE_CORE))
+            .appendItems(stacks -> {
+                stacks.add(new ItemStack(ICE_CORE));
+                stacks.add(new ItemStack(ICY_IRON_INGOT));
+                stacks.add(new ItemStack(ICE_FURNACE));
+            })
+            .build();
 
-    public static final net.minecraft.item.ItemGroup AIER = FabricItemGroupBuilder.build(
-            new Identifier("aier","aier"),
-            () -> new ItemStack(ICE_CORE))
-            .appendStacks(stacks -> {
-             stacks.add(new ItemStack(ICE_CORE));
-    });
-
-    public void onInitialize(){
-
-        Registry.register(Registry.ITEM,new Identifier("aier", "ice_core"),ICE_CORE);
-
-    }
 
 }
